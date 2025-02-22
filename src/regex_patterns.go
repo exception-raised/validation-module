@@ -3,7 +3,8 @@ package validator
 import "regexp"
 
 const (
-	validateEmailPattern string = "^[\\w\\-.+]+@([\\w-]+\\.)+[\\w-]{2,}$"
+	validateEmailPattern          string = "^[\\w\\-.+]+@([\\w-]+\\.)+[\\w-]{2,}$"
+	validateStrictPasswordPattern string = "^[a-zA-Z0-9!@#$%^&*()_+{}\\[\\]:;<>,.?~\\-]*[A-Z][a-zA-Z0-9!@#$%^&*()_+{}\\[\\]:;<>,.?~\\-]*[0-9][a-zA-Z0-9!@#$%^&*()_+{}\\[\\]:;<>,.?~\\-]*[!@#$%^&*()_+{}\\[\\]:;<>,.?~\\-][a-zA-Z0-9!@#$%^&*()_+{}\\[\\]:;<>,.?~\\-]*$"
 )
 
 func compileRegex(pattern string) *regexp.Regexp {
@@ -11,5 +12,6 @@ func compileRegex(pattern string) *regexp.Regexp {
 }
 
 var (
-	validateEmailRegex = compileRegex(validateEmailPattern)
+	validateEmailRegex          = compileRegex(validateEmailPattern)
+	validateStrictPasswordRegex = compileRegex(validateEmailPattern)
 )
