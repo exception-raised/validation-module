@@ -12,8 +12,8 @@ func isValidEmail(email string) bool {
 	return validateEmailRegex.MatchString(email)
 }
 
-func isValidLength(entry string, minLength int, maxLength int) bool {
-	if len(entry) < minLength || len(entry) > maxLength {
+func isValidLength(input string, minLength int, maxLength int) bool {
+	if len(input) < minLength || len(input) > maxLength {
 		return false
 	}
 	return true
