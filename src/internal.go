@@ -5,6 +5,9 @@ import (
 	"regexp"
 )
 
+// improvements:
+// provide error message for invalid inputs
+
 func isValidEmail(email string) bool {
 	return validateEmailRegex.MatchString(email)
 }
